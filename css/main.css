@@ -1,6 +1,10 @@
-/* The main stylesheet designed for kheng.work, each webpage will be served by their CSS file of the same name instead */
+/* Normalization of the main style of kheng.work
+ * Each individual webpage will have their own corresponding CSS stylesheets of the same name
+ */
 
-/* Serving fonts locally through GitHub Pages instead of via Google Fonts where the fonts are acquired */
+/* FONT DEFINITIONS
+ * Serving fonts locally through GitHub Pages instead of via Google Fonts where the fonts are acquired
+ */
 @font-face { /* Uses Zalando Sans Expanded mainly for *the* stylized title, i.e. my full name */
     font-family: 'Zalando Sans Expanded';
     src: url('fonts/Zalando_Sans_Expanded/ZalandoSansExpanded-VariableFont_wght.ttf') format('truetype');
@@ -38,4 +42,35 @@
 @font-face { /* Uses Noto Sans SC for simplified Chinese content */
     font-family: 'Noto Sans SC';
     src: url('fonts/Noto_Sans_SC/NotoSansSC-VariableFont_wght.ttf') format('truetype');
+}
+
+/* COLOUR DEFINITIONS
+ * Note that both .dark and .light will be EXCLUSIVELY used for the entire website's content.
+ * The .dark and .light colours are picked such that they work well with each other whether it's black-on-white or white-on-black.
+ * .lime is used to highlight specific content such as the title, it should be used VERY SPARINGLY.
+ */
+:root {
+    /* Using custom properties to define the three colours: https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties */
+    --dark: #2D2D2D;
+    --light: #DEDEDE;
+    --lime: #88BF00;
+}
+
+/* WEBSITE CONTENT DEFINITIONS */
+.dark_theme { /* Default theme to be applied onto body */
+    background-color: var(--dark);
+    color: var(--light);
+}
+
+.light_theme { /* Optional light theme */
+    background-color: var(--light);
+    color: var(--dark);
+}
+
+body {
+    font-family: 'Zalando Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'DM Serif Text', serif;
 }
