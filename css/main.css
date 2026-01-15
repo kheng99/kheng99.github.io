@@ -1,0 +1,41 @@
+/* The main stylesheet designed for kheng.work, each webpage will be served by their CSS file of the same name instead */
+
+/* Serving fonts locally through GitHub Pages instead of via Google Fonts where the fonts are acquired */
+@font-face { /* Uses Zalando Sans Expanded mainly for *the* stylized title, i.e. my full name */
+    font-family: 'Zalando Sans Expanded';
+    src: url('fonts/Zalando_Sans_Expanded/ZalandoSansExpanded-VariableFont_wght.ttf') format('truetype');
+}
+
+/* Apparently you do need to separate each font files out for different font styles: https://stackoverflow.com/a/2436830 */
+@font-face { /* Zalando Sans Expanded ITALIC */
+    font-family: 'Zalando Sans Expanded';
+    src: url('fonts/Zalando_Sans_Expanded/ZalandoSansExpanded-Italic-VariableFont_wght.ttf') format('truetype');
+    font-style: italic;
+}
+
+@font-face { /* DM Serif Text serves as heading font */
+    font-family: 'DM Serif Text';
+    src: url('fonts/DM_Serif_Text/DMSerifText-Regular.ttf') format('truetype');
+}
+
+@font-face { /* DM Serif Text ITALIC */
+    font-family: 'DM Serif Text';
+    src: url('fonts/DM_Serif_Text/DMSerifText-Italic.ttf') format('truetype');
+    font-style: italic;
+}
+
+@font-face { /* Zalando Sans serves as content font */
+    font-family: 'Zalando Sans';
+    src: url('fonts/Zalando_Sans/ZalandoSans-VariableFont_wdth,wght.ttf') format('truetype');
+}
+
+@font-face { /* Zalando Sans ITALIC */
+    font-family: 'Zalando Sans';
+    src: url('fonts/Zalando_Sans/ZalandoSans-Italic-VariableFont_wdth,wght.ttf') format('truetype');
+    font-style: italic;
+}
+
+@font-face { /* Uses Noto Sans SC for simplified Chinese content */
+    font-family: 'Noto Sans SC';
+    src: url('fonts/Noto_Sans_SC/NotoSansSC-VariableFont_wght.ttf') format('truetype');
+}
