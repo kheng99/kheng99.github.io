@@ -4,6 +4,8 @@
 
 /* FONT DEFINITIONS
  * Serving fonts locally through GitHub Pages instead of via Google Fonts where the fonts are acquired
+ * Each Chinese font will have their subsets generated manually elsewhere before including it as <name>-prod.ttf
+ * due to the issue of full Chinese fonts being way too large to be included for webpages: https://asianabsolute.co.uk/blog/chinese-web-fonts/
  */
 @font-face { /* Uses Zalando Sans Expanded mainly for *the* stylized titles, e.g. my full name */
     font-family: 'Zalando Sans Expanded';
