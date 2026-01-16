@@ -5,7 +5,7 @@
 /* FONT DEFINITIONS
  * Serving fonts locally through GitHub Pages instead of via Google Fonts where the fonts are acquired
  */
-@font-face { /* Uses Zalando Sans Expanded mainly for *the* stylized title, i.e. my full name */
+@font-face { /* Uses Zalando Sans Expanded mainly for *the* stylized titles, e.g. my full name */
     font-family: 'Zalando Sans Expanded';
     src: url('fonts/Zalando_Sans_Expanded/ZalandoSansExpanded-VariableFont_wght.ttf') format('truetype');
 }
@@ -15,6 +15,11 @@
     font-family: 'Zalando Sans Expanded';
     src: url('fonts/Zalando_Sans_Expanded/ZalandoSansExpanded-Italic-VariableFont_wght.ttf') format('truetype');
     font-style: italic;
+}
+
+@font-face { /* Uses Zhi Mang Xing for SIMPLIFIED Chinese stylized titles, e.g. my full Chinese name */
+    font-family: 'Zhi Mang Xing';
+    src: url('fonts/Zhi Mang Xing/ZhiMangXing-Regular.ttf') format('truetype');
 }
 
 @font-face { /* DM Serif Text serves as heading font */
@@ -28,9 +33,18 @@
     font-style: italic;
 }
 
-@font-face { /* Zalando Sans serves as content font */
-    font-family: 'Zalando Sans';
-    src: url('fonts/Zalando_Sans/ZalandoSans-VariableFont_wdth,wght.ttf') format('truetype');
+/* Uses Google Noto Serif TC with ExtraBold 800 weighting (Bold 700 weighting also works visually alternatively) for TRADITIONAL Chinese heading font, because:
+ * - It pairs well visually with DM Serif Text from a very informal survey across three places I know with mixed knowledge of Chinese language
+ * - There are significantly more Traditional Han fonts in Google Font likely due to the inclusion of Japanese type foundries through kanji
+ *     - The quirks of Japanese kanji being a mix of mostly traditional Chinese and sometimes simplified Chinese scripts (on top of their own 
+ *       unique characters) means that certain characters like traditional 黃 might NOT be rendered by the font *at all* whereas simplified 
+ *       黄 is rendered correctly. This is not a problem with very rare Chinese type foundries as well as Google Noto
+ * - Malaysian Chinese literature and news articles have a habit of using traditional Chinese for title, but simplified Chinese for content
+ */
+
+@font-face { /* Noto Serif TC serves as Chinese heading font */
+    font-family: 'Noto Serif TC';
+    src: url('fonts/Noto_Serif_TC/NotoSerifTC-VariableFont_wght.ttf') format('truetype');
 }
 
 @font-face { /* Zalando Sans ITALIC */
@@ -53,7 +67,8 @@
     /* Using custom properties to define the three colours: https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties */
     --dark: #2D2D2D;
     --light: #DEDEDE;
-    --lime: #88BF00;
+    --lime: #95BA00;
+    --yellow: #BAAB00; /* Might consider using it as an alternative to --lime */
 }
 
 /* WEBSITE CONTENT DEFINITIONS */
@@ -67,10 +82,14 @@
     color: var(--dark);
 }
 
+.title {
+    font-family: 'Zalando Sans Expanded', 'Zhi Mang Xing', serif;
+}
+
 body {
-    font-family: 'Zalando Sans', sans-serif;
+    font-family: 'Zalando Sans', 'Noto Sans SC' sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'DM Serif Text', serif;
+    font-family: 'DM Serif Text', 'Noto Serif TC', serif;
 }
