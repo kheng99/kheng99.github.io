@@ -4,8 +4,21 @@
 
 /* FONT DEFINITIONS
  * Serving fonts locally through GitHub Pages instead of via Google Fonts where the fonts are acquired
+ *
  * Each Chinese font will have their subsets generated manually elsewhere before including it as <name>-prod.ttf
  * due to the issue of full Chinese fonts being way too large to be included for webpages: https://asianabsolute.co.uk/blog/chinese-web-fonts/
+ *
+ * I personally would like to avoid having to rely on third-party websites and host everything locally as much as I could, therefore the original
+ * font files will be kept in the GitHub Page repository (from which the website is served), but manually generating my own font subset files
+ * through the use of https://github.com/antfu/chinese-font-subset-for-crowds, which is not a problem since the actual Chinese content will not
+ * be modified frequently as it's a portfolio website
+ *
+ * I have considered Justfont and Youziku per the suggestion of Asian Absolute linked previously, but there are a few problems with either services:
+ * - Justfont is a Taiwanese type foundry and webfont service provider, meaning they only serve traditional Chinese fonts, which is not useful for me
+ *   as someone who needs to serve both traditional and simplified Chinese fonts while minimizing reliance of third party services. Additionally, the
+ *   license fees for any of the fonts are way beyond what I could afford (at the time of writing at Jan 2026)
+ * - Youziku seemingly hosts their servers on mainland China, whose Internet backbone to Malaysia specifically has historically not been the best. Additionally,
+*    some fonts require paying for subscription, which again is not something I could afford at the time of writing
  */
 @font-face { /* Uses Zalando Sans Expanded mainly for *the* stylized titles, e.g. my full name */
     font-family: 'Zalando Sans Expanded';
