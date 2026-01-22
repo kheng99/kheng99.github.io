@@ -25,7 +25,7 @@
     font-family: 'Zalando Sans Expanded';
     src:
         local('Zalando Sans Expanded'),
-        url('fonts/Zalando_Sans_Expanded/ZalandoSansExpanded-VariableFont_wght.ttf') format('truetype');
+        url('ZalandoSansExpanded-VariableFont_wght.ttf') format('truetype');
 }
 
 /* Apparently you do need to separate each font files out for different font styles: https://stackoverflow.com/a/2436830 */
@@ -33,7 +33,7 @@
     font-family: 'Zalando Sans Expanded';
     src:
         local('Zalando Sans Expanded'),
-        url('fonts/Zalando_Sans_Expanded/ZalandoSansExpanded-Italic-VariableFont_wght.ttf') format('truetype');
+        url('ZalandoSansExpanded-Italic-VariableFont_wght.ttf') format('truetype');
     font-style: italic;
 }
 
@@ -41,7 +41,7 @@
     font-family: 'Zhi Mang Xing';
     src:
         local('Zhi Mang Xing'),
-        url('fonts/Zhi Mang Xing/ZhiMangXing-Regular.ttf') format('truetype');
+        url('ZhiMangXing-Regular.ttf') format('truetype');
 }
 
 
@@ -49,14 +49,14 @@
     font-family: 'DM Serif Text';
     src:
         local('DM Serif Text'), 
-        url('fonts/DM_Serif_Text/DMSerifText-Regular.ttf') format('truetype');
+        url('DMSerifText-Regular.ttf') format('truetype');
 }
 
 @font-face { /* DM Serif Text ITALIC */
     font-family: 'DM Serif Text';
     src:
         local('DM Serif Text'),
-        url('fonts/DM_Serif_Text/DMSerifText-Italic.ttf') format('truetype');
+        url('DMSerifText-Italic.ttf') format('truetype');
     font-style: italic;
 }
 
@@ -72,14 +72,14 @@
     font-family: 'Noto Serif TC';
     src:
         local('Noto Serif TC'),
-        url('fonts/Noto_Serif_TC/NotoSerifTC-VariableFont_wght.ttf') format('truetype');
+        url('NotoSerifTC-VariableFont_wght.ttf') format('truetype');
 }
 
 @font-face { /* Zalando Sans ITALIC */
     font-family: 'Zalando Sans';
     src:
         local('Zalando Sans'),
-        url('fonts/Zalando_Sans/ZalandoSans-Italic-VariableFont_wdth,wght.ttf') format('truetype');
+        url('ZalandoSans-Italic-VariableFont_wdth,wght.ttf') format('truetype');
     font-style: italic;
 }
 
@@ -87,7 +87,7 @@
     font-family: 'Noto Sans SC';
     src:
         local('Noto Sans SC'), 
-        url('fonts/Noto_Sans_SC/NotoSansSC-VariableFont_wght.ttf') format('truetype');
+        url('NotoSansSC-VariableFont_wght.ttf') format('truetype');
 }
     
 
