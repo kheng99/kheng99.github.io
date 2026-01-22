@@ -23,29 +23,40 @@
  */
 @font-face { /* Uses Zalando Sans Expanded mainly for *the* stylized titles, e.g. my full name */
     font-family: 'Zalando Sans Expanded';
-    src: url('fonts/Zalando_Sans_Expanded/ZalandoSansExpanded-VariableFont_wght.ttf') format('truetype');
+    src:
+        local('Zalando Sans Expanded'),
+        url('fonts/Zalando_Sans_Expanded/ZalandoSansExpanded-VariableFont_wght.ttf') format('truetype');
 }
 
 /* Apparently you do need to separate each font files out for different font styles: https://stackoverflow.com/a/2436830 */
 @font-face { /* Zalando Sans Expanded ITALIC */
     font-family: 'Zalando Sans Expanded';
-    src: url('fonts/Zalando_Sans_Expanded/ZalandoSansExpanded-Italic-VariableFont_wght.ttf') format('truetype');
+    src:
+        local('Zalando Sans Expanded'),
+        url('fonts/Zalando_Sans_Expanded/ZalandoSansExpanded-Italic-VariableFont_wght.ttf') format('truetype');
     font-style: italic;
 }
 
 @font-face { /* Uses Zhi Mang Xing for SIMPLIFIED Chinese stylized titles, e.g. my full Chinese name */
     font-family: 'Zhi Mang Xing';
-    src: url('fonts/Zhi Mang Xing/ZhiMangXing-Regular.ttf') format('truetype');
+    src:
+        local('Zhi Mang Xing'),
+        url('fonts/Zhi Mang Xing/ZhiMangXing-Regular.ttf') format('truetype');
 }
+
 
 @font-face { /* DM Serif Text serves as heading font */
     font-family: 'DM Serif Text';
-    src: url('fonts/DM_Serif_Text/DMSerifText-Regular.ttf') format('truetype');
+    src:
+        local('DM Serif Text'), 
+        url('fonts/DM_Serif_Text/DMSerifText-Regular.ttf') format('truetype');
 }
 
 @font-face { /* DM Serif Text ITALIC */
     font-family: 'DM Serif Text';
-    src: url('fonts/DM_Serif_Text/DMSerifText-Italic.ttf') format('truetype');
+    src:
+        local('DM Serif Text'),
+        url('fonts/DM_Serif_Text/DMSerifText-Italic.ttf') format('truetype');
     font-style: italic;
 }
 
@@ -57,22 +68,28 @@
  *       黄 is rendered correctly. This is not a problem with very rare Chinese type foundries as well as Google Noto
  * - Malaysian Chinese literature and news articles have a habit of using traditional Chinese for title, but simplified Chinese for content
  */
-
 @font-face { /* Noto Serif TC serves as Chinese heading font */
     font-family: 'Noto Serif TC';
-    src: url('fonts/Noto_Serif_TC/NotoSerifTC-VariableFont_wght.ttf') format('truetype');
+    src:
+        local('Noto Serif TC'),
+        url('fonts/Noto_Serif_TC/NotoSerifTC-VariableFont_wght.ttf') format('truetype');
 }
 
 @font-face { /* Zalando Sans ITALIC */
     font-family: 'Zalando Sans';
-    src: url('fonts/Zalando_Sans/ZalandoSans-Italic-VariableFont_wdth,wght.ttf') format('truetype');
+    src:
+        local('Zalando Sans'),
+        url('fonts/Zalando_Sans/ZalandoSans-Italic-VariableFont_wdth,wght.ttf') format('truetype');
     font-style: italic;
 }
 
-@font-face { /* Uses Noto Sans SC for simplified Chinese content */
+@font-face {  /* Uses Noto Sans SC for simplified Chinese content */
     font-family: 'Noto Sans SC';
-    src: url('fonts/Noto_Sans_SC/NotoSansSC-VariableFont_wght.ttf') format('truetype');
+    src:
+        local('Noto Sans SC'), 
+        url('fonts/Noto_Sans_SC/NotoSansSC-VariableFont_wght.ttf') format('truetype');
 }
+    
 
 /* COLOUR DEFINITIONS
  * Note that both .dark and .light will be EXCLUSIVELY used for the entire website's content.
@@ -88,24 +105,37 @@
 }
 
 /* WEBSITE CONTENT DEFINITIONS */
-.dark_theme { /* Default theme to be applied onto body */
+.dark-theme { /* Default theme to be applied onto body */
     background-color: var(--dark);
     color: var(--light);
 }
 
-.light_theme { /* Optional light theme */
+.light-theme { /* Optional light theme */
     background-color: var(--light);
     color: var(--dark);
 }
 
-.title {
-    font-family: 'Zalando Sans Expanded', 'Zhi Mang Xing', serif;
-}
-
 body {
-    font-family: 'Zalando Sans', 'Noto Sans SC' sans-serif;
+    font-family: 'Zalando Sans', 'Noto Sans SC', sans-serif;
+    /* https://stackoverflow.com/questions/17756649/disable-the-horizontal-scroll */
+    overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'DM Serif Text', 'Noto Serif TC', serif;
+    font-weight: 500;
+}
+
+/* Generic navigation bar declaration; define the font size and ul margin at each individual page CSS level instead */
+
+.nav {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.nav > li {
+    /* https://stackoverflow.com/a/15710719 */
+    display: inline-block;
+    margin-right: 2dvw;
 }
