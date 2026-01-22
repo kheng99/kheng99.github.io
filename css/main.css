@@ -102,6 +102,9 @@
     --light: #DEDEDE;
     --lime: #95BA00;
     --yellow: #BAAB00; /* Might consider using it as an alternative to --lime */
+    /* for hyperlinks */
+    --blue: #008ea7;
+    --purple: #be4db5;
 }
 
 /* WEBSITE CONTENT DEFINITIONS */
@@ -127,7 +130,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Generic navigation bar declaration; define the font size and ul margin at each individual page CSS level instead */
-
 .nav {
     margin: 0;
     padding: 0;
@@ -138,4 +140,30 @@ h1, h2, h3, h4, h5, h6 {
     /* https://stackoverflow.com/a/15710719 */
     display: inline-block;
     margin-right: 2dvw;
+}
+
+/* Generic hyperlink style */
+.dark-theme :link {
+    color: var(--light);
+}
+
+.light-theme :link {
+    color: var(--dark);
+}
+
+/* !important is the only one working for me: https://stackoverflow.com/a/49049199 */
+a:hover {
+    color: var(--blue) !important;
+}
+
+.dark-theme a:active {
+    color: var(--light) !important;
+}
+
+.light-theme a:active {
+    color: var(--dark) !important;
+}
+
+:visited {
+    color: var(--purple);
 }
